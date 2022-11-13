@@ -70,7 +70,5 @@ public class Person {
     public String toString() {
         return "Person{" + "name=" + name + ", gender=" + gender + ", fathersName=" + fathersName + ", mothersName=" + mothersName + ", children=" + children + '}';
     }
-    
-    
 }
     
