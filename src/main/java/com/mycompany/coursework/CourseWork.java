@@ -23,23 +23,33 @@ public class CourseWork {
             // var for csv line            
             String line ="";
            //split indicator 
-            String split="";
+            String split="\\s+";
            //ArrayList with persons             
             ArrayList<Person> persons = new ArrayList<Person>();
             
         try{
              BufferedReader br = new BufferedReader(new FileReader(file));
              while((line = br.readLine())!=null){
-                 System.out.println(line);
-                 String neo [] =line.split(split);
-//                 for(String n : neo){
-//                 System.out.println(n);
-//                 }
+//                 System.out.println(line); 
                  
+                 String words [] = line.split(split);
+                 
+                 for(int i =0 ; i<words.length; i++){
+                 words[i] = words[i].replaceAll("[^\\w]", "");
+//                 System.out.println(words.length);
+                 try{
+                 System.out.println("The name is: "+words[0]+" , the surname is;  "
+                  +words[1]+", the role is: "+words[2]+","
+                + " has an affair with:"+words[3]+" children of: "+words[4]);
+                 
+                 }catch(ArrayIndexOutOfBoundsException e){
+                   
+                 System.out.println(e);
+                 }
+                }
              }
         }catch(IOException e){
             System.out.print("Problem with file" + e);
         }
-
     }
 }
