@@ -20,14 +20,17 @@ public class CourseWork {
            //change to your specific file path 
             String file ="C:\\Users\\giann\\Documents\\NetBeansProjects\\CourseWork\\src\\main\\java\\file\\tree.csv";
             String line ="";
-            String test = "";
         try{
              BufferedReader br = new BufferedReader(new FileReader(file));
              while((line = br.readLine())!=null){
-                 System.out.println (line);
+                 System.out.println(line);
+                 String neo [] =line.split("");
+//                 for(String n : neo){
+//                 System.out.println(n);
+//                 }
+                 
              }
         }catch(IOException e){
-//            asdasd
             System.out.print("Problem with file" + e);
         }
 
