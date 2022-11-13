@@ -27,6 +27,7 @@ public class CourseWork {
                  System.out.println (line);
              }
         }catch(IOException e){
+//            asdasd
             System.out.print("Problem with file" + e);
         }
 
